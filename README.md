@@ -9,7 +9,7 @@
  * RIGHT CAMERA Y servo signal pin 9
  
  
- ## The command to controll the servos/camera angle
+ ## The command to control the servos/camera angle
   * The command for controlling the servo angle is recieved via the serial port  (UART). And the data should be in the following string format. 
        *#x1,y1,x2,y2,speed**
     
