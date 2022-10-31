@@ -10,7 +10,8 @@
  
  
  ## The command to control the servos/camera angle
-  * The command for controlling the servo angle is recieved via the serial port  (UART). And the data should be in the following string format. 
+  * The command for controlling the servo angle is recieved via the serial port  (UART). And the data should be in the following string format.
+  
        *#x1,y1,x2,y2,speed**
     
  *   '#'  - start character of a data frame
