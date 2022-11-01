@@ -39,7 +39,7 @@ The following wiring diagram shows the servo connections to arduino board. Here 
     1. If the system get initialized, then 4 servos will rotate from 0-180 degree and return back to 90 degree angle.  
     2. This initialization is performed to ensure proper working of servo motors.  
 3. Launch any serial terminal application to communicate over serial port.  
-4. select the device port and baud rate as 9600.
+4. From the application, select the device port and baud rate as 9600.
 6. Now you can start sending the command over the serial port with the following format.
     
     *#x1,y1,x2,y2,speed**  
