@@ -10,6 +10,10 @@
  
  
  ## The command to control the servos/camera angle.
+  * The system will take some time to initialize after power up.
+  * The system send a message "SCA ready" to the host machine through UART after successfull initialization.
+  * If this message is not recieved, then it is clear that there is some issue with your system!
+  * User can start sending commands to the system after receiving the ready message.
   * The command for controlling the servo angle is recieved via the serial port  (UART). And the data should be in the following string format.
   
        *#x1,y1,x2,y2,speed**
