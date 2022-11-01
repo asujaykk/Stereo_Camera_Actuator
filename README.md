@@ -24,3 +24,17 @@
  *   '*' - end character        
     
 
+## Camera pan tilt holder 
+The following picture shows the pan tilt camera holder with servos.In which X servo motor rotate the camera platform in horizontal plane (pan movement) and Y servo motor rotate the camera platform in vertical plane (tilt movement).
+![Screenshot 2022-11-01 13:06:35](https://user-images.githubusercontent.com/78997596/199183581-3ccb0dbc-64c6-497f-9fea-ee359962270f.png )
+
+## connection diagram
+The following wiring diagram shows the servo connections to arduino board. Here we are not providing external supply for the servo motors since arduino board can supply enough current to these 4 motors at a time.
+
+![connection](https://user-images.githubusercontent.com/78997596/199190045-70069033-65ad-4977-a04f-8580e5a735d3.png)
+
+
+
+
+
+   
