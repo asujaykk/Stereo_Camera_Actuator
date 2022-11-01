@@ -55,7 +55,6 @@ Servo myservof1y;   //LEFT CAM y servo
 Servo myservof2x;   //RIGHT CAM x servo
 Servo myservof2y;   //RIGHT CAM y servo
 
-
 void setup() {
   // attaches the servo on pins to the servo objects
   myservof2x.attach(3);  
@@ -90,6 +89,8 @@ void setup() {
     myservof2y.write(pos);
     delay(15);                       // waits 15ms for the servo to reach the position
   }
+
+  ser_send_data("SCA ready");
 }
 
 /*
