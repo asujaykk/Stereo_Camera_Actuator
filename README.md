@@ -39,7 +39,10 @@ The following wiring diagram shows the servo connections to arduino board. Here 
 
 ## Controlling the system from host pc:
 1. Ensure that all servos are connected to arduino board  
-2. Connect arduino to the laptop/PC using a usb cable.   
+2. Connect arduino to the laptop/PC using a usb cable.
+3. Clone this repository to your PC,
+4. Compile and upload the code in to your arduino board.
+6. If you successfully flashed the code, then the system start initizing.
     1. If the system get initialized, then 4 servos will rotate from 0-180 degree and return back to 90 degree angle.  
     2. This initialization is performed to ensure proper working of servo motors.  
 3. Launch any serial terminal application to communicate over serial port.  
