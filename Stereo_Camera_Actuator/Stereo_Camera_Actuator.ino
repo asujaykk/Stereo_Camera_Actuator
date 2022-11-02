@@ -57,10 +57,10 @@ Servo myservof2y;   //RIGHT CAM y servo
 
 void setup() {
   // attaches the servo on pins to the servo objects
-  myservof2x.attach(3);  
-  myservof2y.attach(5);
-  myservof1x.attach(6);
-  myservof1y.attach(9);
+  myservof1x.attach(3);  
+  myservof1y.attach(5);
+  myservof2x.attach(6);
+  myservof2y.attach(9);
   Serial.begin(9600);
 
   //Below code will rotate 4 servo motors from 0-180 degree to confirm they are working fine.
