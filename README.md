@@ -1,6 +1,6 @@
-# STEREO CAMERA ACTUATOR.
- This is an arduino project for controlling the angle of 4 servo  motors of a stereo camera system via serial port (UART) fom a host system.
- Each camera can be rotated from '0' to '180' degree in horizontal and vertical direction. Each camera is controlled with two servo motors (one for horizontal movement and another for vertical movement). Here the controller will be an arduino uno (atmega328p), and the command will be given by a host system/embedded system. For basic projects, this system can be controlled from a laptop with serial connection over usb cae but can also be controlled wirelessly by replacing usb serial connection with a bluetooth module  or wifi esp8266 module. Since we are using simple serial communication, the system can be controlled from android  devices or from any embedded system.
+# STEREO CAMERA ACTUATOR (SCA).
+ This is an arduino project for controlling the angle of 4 servo  motors of a stereo camera system via serial port (UART) fom a host PC.
+ Each camera can be rotated from '0' to '180' degree in horizontal and vertical direction. Each camera is controlled with two servo motors (one for horizontal movement and another for vertical movement). Here the controller will be an arduino uno (atmega328p), and the command will be given by a host system/embedded system. For basic projects, SCA can be controlled from a laptop with serial connection over usb cable, but can also be controlled wirelessly by replacing usb serial connection with a bluetooth module  or wifi esp8266 module. Since we are using simple serial communication, the system can be controlled from android  devices or from any embedded system.
    
    
 ## Camera pan tilt holder.
@@ -22,7 +22,7 @@ The following wiring diagram shows the servo connections to arduino board. Here 
  
  
  ## Flashing the code to arduinio.
- * Ensure that all servos are connected to arduino board  
+ * Ensure that all servos are connected to arduino board (based on the wiring diagram).
  * Connect arduino to the laptop/PC using a usb cable.
  * Clone this repository to your PC, with below command  
   
@@ -30,16 +30,16 @@ The following wiring diagram shows the servo connections to arduino board. Here 
  
  * Open this code in arduino IDE.
  * Compile and upload the code in to your arduino board.
- * After sussefull upload you can see, the servos start rotating...:)
+ * After sussefull upload, you can see the servo motors start rotating...:)
  
  
- ## System initialization and command format.
-  * The system will take few seconds to initialize after power up.
-  * After successfull initialization, the system send a message "SCA ready" to the host machine through UART.
-  * This 'ready' message can be used by host system program to identify the status of SCA module.
+ ## SCA initialization and command format.
+  * The SCA module will take few seconds to initialize after power up.
+  * After successfull initialization, the module send the message "SCA ready" to the host machine over UART.
+  * This 'SCA ready' message can be used by host system/program to identify the status of SCA module.
   * If this message is not recieved, then it is clear that there is some issue with your SCA module!
-  * User can start sending commands to the system after successfull initialization.
-  * The command for controlling the servo angle is recieved via the serial port  (UART). And the data frame should be in the following string format.
+  * User can start sending commands to the SCA module after successfull initialization.
+  * The command for controlling the SCA module should be in the following string format.
   
        *#x1,y1,x2,y2,speed**
     
@@ -53,19 +53,21 @@ The following wiring diagram shows the servo connections to arduino board. Here 
  *   '*' - end character    
 
 
-## Controlling the system from host pc:
+## Steps to control SCA from host pc:
  * Connect arduino to the laptop/PC using a usb cable.
- * wait for the system to initize.
+ * wait for the SCA to initize.
     1. If the system get initialized, then 4 servos will rotate from 0-180 degree and return back to 90 degree angle.  
     2. This initialization is performed to ensure proper working of all servo motors.  
  * Launch any serial terminal application to communicate over serial port (you can use arduino serial terminal itself).  
  * From the application, select the device port and baud rate as 9600.
- * Now you can start sending the command over the serial port with the following format.
+ * Now you can start sending commands over the serial port with the following format.
     
     *#x1,y1,x2,y2,speed**  
     
    Once you send the command to SCA module, then hopefully two camera platforms should rotate to the requested angle :)
 
+
+   ## Prototype
    The following picture shows final Stereo camera actuator setup with two Paspberry pi v2 cameras.
    ![IMG_20221104_004024](https://user-images.githubusercontent.com/78997596/199813544-661edc47-010d-4e9c-a367-448855e4df1c.jpg)
 
