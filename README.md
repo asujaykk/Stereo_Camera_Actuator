@@ -66,6 +66,8 @@ The following wiring diagram shows the servo connections to arduino board. Here 
     
    Once you send the command to SCA module, then hopefully two camera platforms should rotate to the requested angle :)
 
+   The following picture shows final Stereo camera actuator setup with two Paspberry pi v2 cameras.
+   ![IMG_20221104_004024](https://user-images.githubusercontent.com/78997596/199813544-661edc47-010d-4e9c-a367-448855e4df1c.jpg)
 
 
    
